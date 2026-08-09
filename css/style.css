@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Mali:wght@400;500;600;700&display=swap');
+
+:root {
+    --pink: #ff8fab;
+    --pink-light: #ffe4ec;
+    --purple: #a78bfa;
+    --purple-light: #eee7ff;
+    --cream: #fffaf5;
+    --white: #ffffff;
+    --text: #5d5366;
+    --dark: #40384a;
+    --shadow: 0 10px 30px rgba(160, 110, 140, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Kanit', sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+        NAVBAR
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 250, 245, 0.92);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+nav {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--pink);
+    font-family: 'Mali', cursive;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--pink);
+}
+
+/* =========================
+        HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 130px 8% 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "♡";
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    font-size: 100px;
+    color: var(--pink-light);
+    transform: rotate(-15deg);
+}
+
+.hero::after {
+    content: "♡";
+    position: absolute;
+    right: 8%;
+    bottom: 15%;
+    font-size: 130px;
+    color: var(--purple-light);
+    transform: rotate(15deg);
+}
+
+.hero-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.small-title {
+    color: var(--purple);
+    font-family: 'Mali', cursive;
+    font-size: 20px;
+}
+
+.hero h1 {
+    font-family: 'Mali', cursive;
+    font-size: clamp(45px, 7vw, 75px);
+    color: var(--dark);
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: var(--pink);
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 2;
+}
+
+.hero-date {
+    margin: 25px auto;
+    padding: 12px 25px;
+    width: fit-content;
+
+    background: var(--white);
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+
+    color: var(--pink);
+}
+
+/* =========================
+        HERO PHOTO
+========================= */
+
+.couple-photo {
+    width: 350px;
+    height: 420px;
+    padding: 15px;
+
+    background: white;
+    box-shadow: var(--shadow);
+
+    transform: rotate(3deg);
+    transition: 0.4s;
+}
+
+.couple-photo:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.couple-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================
+        BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 28px;
+    margin-top: 15px;
+
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    color: white;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-weight: 500;
+
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+/* =========================
+        SECTION
+========================= */
+
+.section {
+    padding: 90px 8%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-family: 'Mali', cursive;
+    font-size: 42px;
+    color: var(--dark);
+}
+
+.section-title p {
+    margin-top: 10px;
+    color: #887c8d;
+}
+
+/* =========================
+        MEMORY CARDS
+========================= */
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.memory-card {
+    background: white;
+    padding: 25px;
+
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+
+    transition: 0.35s;
+}
+
+.memory-card:hover {
+    transform: translateY(-8px) rotate(1deg);
+}
+
+.memory-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--pink-light);
+    border-radius: 50%;
+
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.memory-card h3 {
+    font-family: 'Mali', cursive;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.memory-card p {
+    line-height: 1.8;
+}
+
+/* =========================
+        POLAROID
+========================= */
+
+.polaroid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.polaroid {
+    background: white;
+    padding: 12px 12px 25px;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.35s;
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.polaroid:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.04);
+}
+
+.polaroid img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.polaroid p {
+    text-align: center;
+    margin-top: 15px;
+
+    font-family: 'Mali', cursive;
+    color: var(--dark);
+}
+
+/* =========================
+        TIMELINE
+========================= */
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+    background: linear-gradient(
+        var(--pink),
+        var(--purple)
+    );
+
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    width: 50%;
+    padding: 20px 40px;
+
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+
+    top: 25px;
+    right: -10px;
+
+    width: 20px;
+    height: 20px;
+
+    background: var(--pink);
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -10px;
+}
+
+.timeline-content {
+    background: white;
+    padding: 22px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.timeline-content h3 {
+    font-family: 'Mali', cursive;
+    color: var(--pink);
+}
+
+/* =========================
+        LETTER
+========================= */
+
+.letter {
+    max-width: 700px;
+    margin: auto;
+
+    background: white;
+    padding: 45px;
+
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+
+    text-align: center;
+}
+
+.letter h2 {
+    font-family: 'Mali', cursive;
+    color: var(--pink);
+    margin-bottom: 20px;
+}
+
+.letter p {
+    line-height: 2;
+}
+
+/* =========================
+        FOOTER
+========================= */
+
+footer {
+    margin-top: 50px;
+    padding: 30px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        var(--pink-light),
+        var(--purple-light)
+    );
+
+    color: var(--text);
+}
+
+footer p {
+    font-family: 'Mali', cursive;
+}
+
+/* =========================
+        RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding-top: 170px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .couple-photo {
+        width: 280px;
+        height: 340px;
+    }
+
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        padding-left: 45px;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 5px;
+        right: auto;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .couple-photo {
+        width: 240px;
+        height: 300px;
+    }
+
+    .section {
+        padding: 70px 5%;
+    }
+
+      }
