@@ -678,3 +678,149 @@ footer p {
     }
 
 }
+/* =========================
+        MEMORY FEATURE
+========================= */
+
+.memory-header {
+    padding-bottom: 30px;
+}
+
+.memory-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    padding: 30px;
+
+    border-radius: 30px;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.35s;
+}
+
+.memory-feature:hover {
+    transform: translateY(-5px);
+}
+
+.memory-feature.reverse {
+    direction: rtl;
+}
+
+.memory-feature.reverse .memory-feature-content {
+    direction: ltr;
+}
+
+.memory-feature-image {
+    width: 100%;
+    height: 380px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: var(--pink-light);
+}
+
+.memory-feature-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.memory-feature:hover .memory-feature-image img {
+    transform: scale(1.05);
+}
+
+.memory-feature-content {
+    padding: 20px;
+}
+
+.memory-feature-content > span {
+    color: var(--purple);
+
+    font-family: 'Mali', cursive;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.memory-feature-content h2 {
+    margin: 12px 0 20px;
+
+    font-family: 'Mali', cursive;
+
+    color: var(--dark);
+
+    font-size: 32px;
+}
+
+.memory-feature-content p {
+    line-height: 2;
+
+    color: var(--text);
+}
+
+.memory-date {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    background: var(--pink-light);
+
+    color: var(--pink);
+
+    font-size: 14px;
+}
+
+.special-memory {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 228, 236, 0.8),
+        rgba(238, 231, 255, 0.8)
+    );
+}
+
+
+/* =========================
+        MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .memory-feature,
+    .memory-feature.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 25px;
+    }
+
+    .memory-feature.reverse .memory-feature-content {
+        direction: ltr;
+    }
+
+    .memory-feature-image {
+        height: 280px;
+    }
+
+    .memory-feature-content {
+        padding: 10px;
+    }
+
+    .memory-feature-content h2 {
+        font-size: 27px;
+    }
+
+}
