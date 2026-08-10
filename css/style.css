@@ -525,3 +525,156 @@ footer p {
     }
 
       }
+/* =========================
+        LOVE LETTER
+========================= */
+
+.letter-box {
+    max-width: 850px;
+    margin: auto;
+    position: relative;
+}
+
+.letter-decoration {
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto -30px;
+
+    position: relative;
+    z-index: 2;
+
+    background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--purple)
+    );
+
+    border-radius: 50%;
+
+    font-size: 38px;
+
+    box-shadow: var(--shadow);
+}
+
+.letter-paper {
+    background: #fffdf9;
+
+    padding: 65px 70px;
+
+    border-radius: 10px;
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+
+    border: 1px solid #f1e6e9;
+}
+
+.letter-paper::before {
+    content: "";
+
+    position: absolute;
+
+    top: 25px;
+    left: 30px;
+    right: 30px;
+
+    height: 1px;
+
+    background: #f2dce4;
+}
+
+.letter-paper::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 25px;
+    left: 30px;
+    right: 30px;
+
+    height: 1px;
+
+    background: #f2dce4;
+}
+
+.letter-date {
+    text-align: right;
+
+    color: #a493a1;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+.letter-paper h2 {
+    text-align: center;
+
+    font-family: 'Mali', cursive;
+
+    color: var(--pink);
+
+    font-size: 32px;
+
+    margin-bottom: 35px;
+}
+
+.letter-paper > p {
+    line-height: 2.1;
+
+    font-size: 16px;
+
+    color: var(--text);
+}
+
+.letter-ending {
+    margin-top: 40px;
+
+    padding-top: 25px;
+
+    border-top: 1px dashed #e8ccd8;
+
+    text-align: right;
+
+    font-family: 'Mali', cursive;
+
+    color: var(--pink);
+
+    line-height: 2;
+}
+
+.letter-ending p:last-child {
+    color: var(--purple);
+}
+
+
+/* =========================
+        MOBILE LETTER
+========================= */
+
+@media (max-width: 600px) {
+
+    .letter-paper {
+        padding: 55px 25px;
+    }
+
+    .letter-paper h2 {
+        font-size: 27px;
+    }
+
+    .letter-paper > p {
+        font-size: 15px;
+        line-height: 2;
+    }
+
+    .letter-date {
+        font-size: 13px;
+    }
+
+}
